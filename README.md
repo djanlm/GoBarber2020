@@ -89,9 +89,13 @@ That's the first page of the application, if the user already have an account, h
 
 ![login mobile](https://github.com/djanlm/GoBarber2020/blob/master/login_mobile.png?raw=true)
 
-In the signup page the user should insert his name, email and password in order to create a new account.
+On the signup page the user should insert his name, email and password in order to create a new account.
 
 ![signup](https://github.com/djanlm/GoBarber2020/blob/master/register_mobile.png?raw=true)
+
+On the dashboard page, the user can see a list with all providers and click on any of them. The may also click on its profile picture to go to the update profile page.
+
+![signup](https://github.com/djanlm/GoBarber2020/blob/master/dashboard_logout_mobile.png?raw=true)
 
 After clicking in one of the provider, the user can choose a date and a time for his appointment and then confirm. 
 
