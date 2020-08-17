@@ -1,0 +1,58 @@
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  CreateDateColumn,
+  UpdateDateColumn,
+  ManyToOne,
+  JoinColumn,
+} from 'typeorm';
+
+import User from '@modules/users/infra/typeorm/entities/User';
+
+/**
+ * Um para um (OneToOne)
+ * Um para muitos (OneToMany)
+ * Muitos para muitos (ManyToMany)
+ */
+@Entity('appointments') // decorator. armazena appointment na tabela de appointments
+class Appointment {
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
+
+  @Column()
+  provider_id: string; // vai ser o id de um user
+
+  @ManyToOne(() => User)
+  @JoinColumn({ name: 'provider_id' }) // qual coluna vai estabelecer essa relação. chave estrangeira
+  provider: User; // instância da classe user
+
+  @Column()
+  user_id: string; // vai ser o id do cliente
+
+  // @ManyToOne(() => User, { lazy: true }) // o lazy so tras os dados do user se usarmos appointment.user
+  // @ManyToOne(() => User, { eager: true }) // o eager faz com que os dados do usuario tb sejam retornados, quando o appointment for retornado
+  @ManyToOne(() => User)
+  @JoinColumn({ name: 'user_id' }) // qual coluna vai estabelecer essa relação. chave estrangeira
+  user: User; // nome da relação
+
+  @Column('timestamp with time zone')
+  date: Date;
+
+  @CreateDateColumn()
+  created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
+
+  // Não precisa mais de construtor
+  // constructor(provider: string, date: Date){} Sem TDO
+  /* constructor({ provider, date }: Omit<Appointment, 'id'>) {
+    // Omit<> é como uma função que recebe dois parametros, o tipo e a variável que eu quero omitir.
+    this.id = uuid();
+    this.provider = provider;
+    this.date = date;
+  } */
+}
+
+export default Appointment;
