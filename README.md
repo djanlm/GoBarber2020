@@ -82,9 +82,24 @@ Here, users can update their profile and send a picture.
 
 ### Mobile App
 
+The mobile app is supposed to be used by clients of the service providers. Here they will be able to pick a day and time to make an appointment. They will also be able to update their profile and insert a picture.
+
+
+That's the first page of the application, if the user already have an account, he should insert an e-mail and password and press the button. In case he doesn't have an account he can click on the create account link.
+
 ![login mobile](https://github.com/djanlm/GoBarber2020/blob/master/login_mobile.png?raw=true)
 
-![main page mobile](https://github.com/djanlm/GoBarber2020/blob/master/register_mobile.png?raw=true)
+In the signup page the user should insert his name, email and password in order to create a new account.
 
+![signup](https://github.com/djanlm/GoBarber2020/blob/master/register_mobile.png?raw=true)
+
+After clicking in one of the provider, the user can choose a date and a time for his appointment and then confirm. 
+
+![appointment page](https://github.com/djanlm/GoBarber2020/blob/master/appointment_mobile.png?raw=true)   
+![date picker](https://github.com/djanlm/GoBarber2020/blob/master/datepicker_mobile.png?raw=true)
+
+Confirmation page showing that the appointment was made.
+
+![appointment confirmation](https://github.com/djanlm/GoBarber2020/blob/master/appointment_confirmation_mobile.png?raw=true)
 
 Hope you enjoy it. :heart_eyes:
